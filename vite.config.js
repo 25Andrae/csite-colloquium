@@ -8,12 +8,11 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/csite-colloquium",
+  base: "/csite-colloquium/",
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
   assetsInclude: ['**/*.svg', '**/*.csv'],
-
 });
