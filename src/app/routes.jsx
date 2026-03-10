@@ -19,9 +19,10 @@ export const router = createBrowserRouter([
       { path: "organizing-committee", Component: OrganizingCommittee },
       { path: "evaluation", Component: EvaluationForm },
     ],
-  },
+  }
+],
   {
     // ADD THIS HERE: Your GitHub repository name
-    basename: "/csite-colloquium/",
+    basename: "/csite-colloquium",
   }
-]);
+);
