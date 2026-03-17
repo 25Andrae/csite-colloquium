@@ -1,6 +1,6 @@
 import { Award, FileText, Presentation, User, ArrowRight, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-
+import plenarySpeaker from "../../images/BernardoSVG.svg";
 export function Presenters() {
   const plenarySpeakers = [
     {
@@ -8,7 +8,7 @@ export function Presenters() {
       title: "Associate Professor, Research Fellow",
       affiliation: "College of Computer Studies, De La Salle University",
       bio: "Assistant Dean of Research & Advanced Studies, specializing in human-computer interaction, artificial intelligence, and educational technologies.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+      image: plenarySpeaker,
     },
   ];
 
