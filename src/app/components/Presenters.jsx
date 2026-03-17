@@ -1,13 +1,13 @@
-import { Award, FileText, Presentation, User } from "lucide-react";
+import { Award, FileText, Presentation, User, ArrowRight, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Presenters() {
-  const plenarySpakers = [
+  const plenarySpeakers = [
     {
       name: "Dr. Ryan Ebardo",
-      title: "College of Computer Studies",
-      affiliation: "De La Salle University ",
-      bio: "Associate Professor Research Fellow Assistant Dean, Research & Advanced Studies",
+      title: "Associate Professor, Research Fellow",
+      affiliation: "College of Computer Studies, De La Salle University",
+      bio: "Assistant Dean of Research & Advanced Studies, specializing in human-computer interaction, artificial intelligence, and educational technologies.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
     },
   ];
@@ -41,136 +41,175 @@ export function Presenters() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-16 bg-background">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl mb-4 text-primary text-center">List of Presenters</h1>
-        <p className="text-center text-muted-foreground mb-12">
-          Distinguished speakers and researchers presenting at the colloquium
-        </p>
+        
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-[#ff9856]">
+            Featured Presenters
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Discover the brilliant minds, distinguished researchers, and innovative thinkers sharing their work at this year's colloquium.
+          </p>
+        </div>
 
-        {/* Plenary Speakers */}
-        <section className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="bg-primary/10 p-3 rounded-lg">
-              <Award className="text-primary" size={28} />
-            </div>
-            <h2 className="text-3xl text-primary">Plenary Speakers</h2>
+        {/* Plenary Speakers Section */}
+        <section className="mb-20 relative">
+          <div className="flex items-center gap-4 mb-8">
+  
+            <h2 className="text-3xl font-bold text-foreground">Plenary Speaker</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {plenarySpakers.map((speaker, index) => (
+          <div className="grid md:grid-cols-1 gap-8">
+            {plenarySpeakers.map((speaker, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-lg border border-border hover:shadow-xl transition-shadow"
+                className="group relative bg-card rounded-2xl p-1 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden"
               >
-                <div className="flex items-start gap-4 mb-4">
-                  <ImageWithFallback
-                    src={speaker.image}
-                    alt={speaker.name}
-                    className="w-24 h-24 rounded-full object-cover"
-                  />
-                  <div>
-                    <h3 className="text-xl mb-1">{speaker.name}</h3>
-                    <p className="text-sm text-primary mb-1">{speaker.title}</p>
-                    <p className="text-sm text-muted-foreground">{speaker.affiliation}</p>
+                {/* Animated Gradient Border Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-[#ff9856]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="relative bg-card rounded-xl p-6 md:p-8 h-full flex flex-col md:flex-row items-center md:items-start gap-8 border border-border">
+                  
+                  {/* Avatar with Gradient Ring */}
+                  <div className="flex-shrink-0 relative">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-primary to-[#ff9856] rounded-full blur opacity-40 group-hover:opacity-70 transition-opacity duration-300"></div>
+                    <div className="relative p-1 bg-gradient-to-tr from-primary to-[#ff9856] rounded-full">
+                      <ImageWithFallback
+                        src={speaker.image}
+                        alt={speaker.name}
+                        className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-card"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Speaker Details */}
+                  <div className="flex-1 text-center md:text-left">
+                    <div className="inline-block bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full mb-3">
+                      Keynote Presenter
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+                      {speaker.name}
+                    </h3>
+                    <p className="text-lg font-medium text-foreground mb-1">{speaker.title}</p>
+                    <p className="text-muted-foreground mb-4">{speaker.affiliation}</p>
+                    <p className="text-muted-foreground leading-relaxed italic border-l-2 border-primary/30 pl-4 md:border-l-4">
+                      "{speaker.bio}"
+                    </p>
                   </div>
                 </div>
-                <div className="bg-primary/5 rounded-lg p-4 mb-3">
-                  <p className="text-sm mb-1 text-muted-foreground">Topic:</p>
-                  <p className="text-primary">{speaker.topic}</p>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">{speaker.bio}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Oral Presenters */}
-        <section className="mb-16">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="bg-primary/10 p-3 rounded-lg">
-              <Presentation className="text-primary" size={28} />
+        {/* Oral Presenters Section */}
+        <section className="mb-20">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+              <Presentation size={24} />
             </div>
-            <h2 className="text-3xl text-primary">Oral Presenters</h2>
+            <h2 className="text-3xl font-bold text-foreground">Oral Presenters</h2>
           </div>
 
-          <div className="bg-secondary rounded-lg p-6 mb-6">
-            <p className="text-muted-foreground text-sm">
-              <strong>Session A:</strong> Computer Science & IT (Day 1, 11:30 AM - 1:00 PM) |{" "}
-              <strong>Session B:</strong> Engineering (Day 1, 2:00 PM - 3:30 PM) |{" "}
-              <strong>Session C:</strong> Natural Sciences (Day 2, 11:00 AM - 12:30 PM)
-            </p>
+          <div className="bg-secondary/30 border-l-4 border-primary rounded-r-xl p-5 mb-8 flex items-start gap-3">
+            <div className="flex-1 text-sm text-muted-foreground leading-relaxed">
+              <span className="font-semibold text-foreground">Schedule (April 16):</span>{" "}
+              <span className="inline-block mr-3"><strong>Session A:</strong> 11:30 AM - 1:00 PM |</span>
+              <span className="inline-block mr-3"><strong>Session B:</strong> 2:00 PM - 3:30 PM |</span>
+              <span className="inline-block"><strong>Session C:</strong> 3:30 PM - 5:00 PM</span>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-4">
             {oralPresenters.map((presenter, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg p-5 shadow-md border border-border hover:shadow-lg transition-shadow"
+                className="group bg-card rounded-xl p-5 shadow-sm border border-border hover:border-primary/40 hover:shadow-md transition-all duration-300 flex items-start gap-4 hover:-translate-y-1"
               >
-                <div className="flex items-start gap-3">
-                  <div className="bg-primary/10 p-2 rounded-lg flex-shrink-0">
-                    <User className="text-primary" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="mb-2">{presenter.name}</h4>
-                    <p className="text-sm text-muted-foreground mb-2">{presenter.topic}</p>
-                    <span className="inline-block text-xs bg-primary/20 text-primary px-3 py-1 rounded-full">
-                      {presenter.session}
-                    </span>
-                  </div>
+                <div className="bg-secondary p-3 rounded-full flex-shrink-0 group-hover:bg-primary/10 transition-colors">
+                  <User className="text-muted-foreground group-hover:text-primary transition-colors" size={20} />
+                </div>
+                <div className="flex-1 pt-1">
+                  <h4 className="font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                    {presenter.name}
+                  </h4>
+                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                    {presenter.topic}
+                  </p>
+                  <span className="inline-flex items-center text-xs font-semibold bg-primary/10 text-primary px-3 py-1 rounded-full">
+                    {presenter.session}
+                  </span>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Poster Presenters */}
-        <section>
-          <div className="flex items-center gap-3 mb-6">
-            <div className="bg-primary/10 p-3 rounded-lg">
-              <FileText className="text-primary" size={28} />
+        {/* Poster Presenters Section */}
+        <section className="mb-20">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-12 h-12 rounded-xl bg-[#ff9856]/10 flex items-center justify-center text-[#ff9856]">
+              <FileText size={24} />
             </div>
-            <h2 className="text-3xl text-primary">Poster Presenters</h2>
+            <h2 className="text-3xl font-bold text-foreground">Poster Presenters</h2>
           </div>
 
-          <div className="bg-secondary rounded-lg p-6 mb-6">
-            <p className="text-muted-foreground text-sm">
-              Poster presentations will be held on <strong>Day 1, 3:30 PM - 5:00 PM</strong>. All posters
-              will be displayed in the main exhibition hall for interactive discussions.
+          <div className="bg-secondary/30 border-l-4 border-[#ff9856] rounded-r-xl p-5 mb-8">
+            <p className="text-sm text-muted-foreground">
+              Poster presentations will be held on <strong>April 16, 3:30 PM - 4:30 PM</strong>. 
+              All posters will be displayed in the main exhibition hall for interactive discussions.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {posterPresenters.map((presenter, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg p-4 shadow-md border border-border hover:shadow-lg transition-shadow"
+                className="group bg-card rounded-xl p-5 shadow-sm border border-border hover:shadow-md hover:border-[#ff9856]/40 transition-all duration-300"
               >
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs bg-primary text-white px-2 py-1 rounded font-medium">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs font-bold bg-gradient-to-r from-primary to-[#ff9856] text-white px-3 py-1 rounded-full shadow-sm">
                     {presenter.code}
                   </span>
-                  <User className="text-primary" size={16} />
+                  <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center">
+                    <User className="text-muted-foreground group-hover:text-[#ff9856] transition-colors" size={14} />
+                  </div>
                 </div>
-                <h4 className="text-sm mb-2">{presenter.name}</h4>
-                <p className="text-xs text-muted-foreground leading-relaxed">{presenter.topic}</p>
+                <h4 className="font-bold text-foreground mb-1">{presenter.name}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {presenter.topic}
+                </p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Contact Info */}
-        <div className="bg-gradient-to-r from-primary to-[#ff9856] rounded-xl p-8 text-white mt-12">
-          <h3 className="text-2xl mb-3">Want to Present Your Research?</h3>
-          <p className="mb-4 opacity-95">
-            Stay tuned for announcements about the 3rd CSITE Research Colloquium. Follow our updates
-            to learn about call for papers and submission deadlines.
-          </p>
-          <button className="bg-white text-primary px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
-            Subscribe to Updates
-          </button>
+        {/* Call to Action Box */}
+        <div className="relative overflow-hidden bg-card rounded-2xl shadow-xl border border-border mt-16">
+          {/* Decorative background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary via-[#ff9856] to-primary opacity-90"></div>
+          
+          <div className="relative p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-white z-10">
+            <div className="max-w-xl text-center md:text-left">
+              <h3 className="text-3xl font-bold mb-3">Stay Connected with CSITE!</h3>
+              <p className="text-white/90 text-lg">
+                Want to present your research next year? Follow our official Facebook page for real-time announcements, call for papers, and updates on the 3rd CSITE Research Colloquium.
+              </p>
+            </div>
+            <a 
+              href="https://www.facebook.com/adzucsite"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 group flex items-center gap-2 bg-white text-primary font-bold px-8 py-4 rounded-xl hover:bg-gray-50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              Follow us on Facebook
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
         </div>
+
       </div>
     </div>
   );
