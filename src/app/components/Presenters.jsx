@@ -4,20 +4,11 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 export function Presenters() {
   const plenarySpakers = [
     {
-      name: "Dr. John Anderson",
-      title: "Professor of Computer Science",
-      affiliation: "Stanford University",
-      topic: "Advances in Artificial Intelligence and Machine Learning",
-      bio: "Dr. Anderson is a leading researcher in AI with over 20 years of experience. He has published 150+ papers and led groundbreaking projects in deep learning and neural networks.",
+      name: "Dr. Ryan Ebardo",
+      title: "College of Computer Studies",
+      affiliation: "De La Salle University ",
+      bio: "Associate Professor Research Fellow Assistant Dean, Research & Advanced Studies",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
-    },
-    {
-      name: "Prof. Sarah Williams",
-      title: "Director of Climate Research Lab",
-      affiliation: "Massachusetts Institute of Technology",
-      topic: "Sustainable Engineering Solutions for Climate Change",
-      bio: "Prof. Williams specializes in sustainable engineering and has received numerous awards for her work on renewable energy systems and climate adaptation strategies.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400",
     },
   ];
 
