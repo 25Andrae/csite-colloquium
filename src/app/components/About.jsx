@@ -135,15 +135,14 @@ export function About() {
       <div className="grid lg:grid-cols-12 gap-12 mb-16">
         <div className="lg:col-span-7">
           <h2 className="text-3xl font-bold mb-6 text-foreground">About the Colloquium</h2>
-          {/* Increased text size, line height, and contrast */}
           <div className="space-y-6 text-foreground/80 leading-relaxed text-lg">
             <p>
               The 2nd CSITE Research Colloquium, guided by the theme{" "}
               <span className="font-semibold text-primary">
                 “Innovating Science and Technology: Connecting Ideas, Empowering Communities”
               </span>, 
-              is a premier academic gathering that brings together researchers, faculty members, and students 
-              to share impactful research and innovative solutions.
+              serves as a dedicated academic platform for undergraduate and graduate students to 
+              present their research findings and capstone projects.
             </p>
 
             <p>
@@ -156,8 +155,8 @@ export function About() {
             <p>
               Through plenary sessions, research presentations, and collaborative discussions, the event promotes 
               the exchange of ideas, encourages innovation, and strengthens connections between academia and the 
-              community. It serves as a platform for empowering researchers to contribute meaningful advancements 
-              in science and technology.
+              community. It serves as an engaging environment for empowering emerging scholars to contribute 
+              meaningful advancements in science and technology.
             </p>
           </div>
         </div>
@@ -165,56 +164,93 @@ export function About() {
         <div className="lg:col-span-5">
           <h2 className="text-3xl font-bold mb-6 text-foreground">Focus Areas</h2>
           <div className="space-y-4">
-            {/* Added left borders and better padding for clearer visual chunks */}
-            <div className="bg-secondary/40 border-l-4 border-primary rounded-r-xl p-5 hover:bg-secondary/60 transition-colors">
-              <h4 className="mb-2 font-bold text-primary text-lg leading-snug">
-                Mathematics Education, Learning Analytics & Data-Driven Pedagogies
-              </h4>
-              <p className="text-foreground/70 text-sm leading-relaxed">
-                Explore innovative teaching strategies, assessment methods, and the use of data analytics to enhance learning outcomes in mathematics education.
-              </p>
+            <div className="bg-secondary/40 border-l-4 border-primary rounded-r-xl p-5 hover:bg-secondary/60 transition-colors flex flex-col justify-between">
+              <div>
+                <h4 className="mb-2 font-bold text-primary text-lg leading-snug">
+                  Mathematics Education, Learning Analytics & Data-Driven Pedagogies
+                </h4>
+                <p className="text-foreground/70 text-sm leading-relaxed">
+                  Explore innovative teaching strategies, assessment methods, and the use of data analytics to enhance learning outcomes in mathematics education.
+                </p>
+              </div>
+              <div className="flex gap-2 mt-4 flex-wrap">
+                <span className="text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-2.5 py-1 rounded-full">
+                  #SDG4 Quality Education
+                </span>
+              </div>
             </div>
 
-            <div className="bg-secondary/40 border-l-4 border-primary rounded-r-xl p-5 hover:bg-secondary/60 transition-colors">
-              <h4 className="mb-2 font-bold text-primary text-lg leading-snug">
-                Artificial Intelligence, Machine Learning, and Data Science
-              </h4>
-              <p className="text-foreground/70 text-sm leading-relaxed">
-                Showcase advancements in AI, machine learning models, and data-driven solutions addressing real-world problems across various domains.
-              </p>
+            <div className="bg-secondary/40 border-l-4 border-primary rounded-r-xl p-5 hover:bg-secondary/60 transition-colors flex flex-col justify-between">
+              <div>
+                <h4 className="mb-2 font-bold text-primary text-lg leading-snug">
+                  Artificial Intelligence, Machine Learning, and Data Science
+                </h4>
+                <p className="text-foreground/70 text-sm leading-relaxed">
+                  Showcase advancements in AI, machine learning models, and data-driven solutions addressing real-world problems across various domains.
+                </p>
+              </div>
+              <div className="flex gap-2 mt-4 flex-wrap">
+                <span className="text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-2.5 py-1 rounded-full">
+                  #SDG9 Industry & Innovation
+                </span>
+              </div>
             </div>
 
-            <div className="bg-secondary/40 border-l-4 border-primary rounded-r-xl p-5 hover:bg-secondary/60 transition-colors">
-              <h4 className="mb-2 font-bold text-primary text-lg leading-snug">
-                Engineering, IoT, and Smart Infrastructure
-              </h4>
-              <p className="text-foreground/70 text-sm leading-relaxed">
-                Present innovations in smart systems, IoT-enabled solutions, and engineering technologies applied to infrastructure development and healthcare.
-              </p>
+            <div className="bg-secondary/40 border-l-4 border-primary rounded-r-xl p-5 hover:bg-secondary/60 transition-colors flex flex-col justify-between">
+              <div>
+                <h4 className="mb-2 font-bold text-primary text-lg leading-snug">
+                  Engineering, IoT, and Smart Infrastructure
+                </h4>
+                <p className="text-foreground/70 text-sm leading-relaxed">
+                  Present innovations in smart systems, IoT-enabled solutions, and engineering technologies applied to infrastructure development and healthcare.
+                </p>
+              </div>
+              <div className="flex gap-2 mt-4 flex-wrap">
+                <span className="text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-2.5 py-1 rounded-full">
+                  #SDG9 Industry & Innovation
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-2.5 py-1 rounded-full">
+                  #SDG11 Sustainable Cities
+                </span>
+              </div>
             </div>
 
-            <div className="bg-secondary/40 border-l-4 border-primary rounded-r-xl p-5 hover:bg-secondary/60 transition-colors">
-              <h4 className="mb-2 font-bold text-primary text-lg leading-snug">
-                Animation, Software & Multimedia Production
-              </h4>
-              <p className="text-foreground/70 text-sm leading-relaxed">
-                Highlight creative and technical projects in software engineering, digital media, animation, and interactive multimedia development.
-              </p>
+            <div className="bg-secondary/40 border-l-4 border-primary rounded-r-xl p-5 hover:bg-secondary/60 transition-colors flex flex-col justify-between">
+              <div>
+                <h4 className="mb-2 font-bold text-primary text-lg leading-snug">
+                  Animation, Software & Multimedia Production
+                </h4>
+                <p className="text-foreground/70 text-sm leading-relaxed">
+                  Highlight creative and technical projects in software engineering, digital media, animation, and interactive multimedia development.
+                </p>
+              </div>
+              <div className="flex gap-2 mt-4 flex-wrap">
+                <span className="text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-2.5 py-1 rounded-full">
+                  #SDG9 Industry & Innovation
+                </span>
+              </div>
             </div>
 
-            <div className="bg-secondary/40 border-l-4 border-primary rounded-r-xl p-5 hover:bg-secondary/60 transition-colors">
-              <h4 className="mb-2 font-bold text-primary text-lg leading-snug">
-                Natural Sciences and Computational Models
-              </h4>
-              <p className="text-foreground/70 text-sm leading-relaxed">
-                Discuss research in natural sciences supported by computational modeling, simulations, and data analysis techniques.
-              </p>
+            <div className="bg-secondary/40 border-l-4 border-primary rounded-r-xl p-5 hover:bg-secondary/60 transition-colors flex flex-col justify-between">
+              <div>
+                <h4 className="mb-2 font-bold text-primary text-lg leading-snug">
+                  Natural Sciences and Computational Models
+                </h4>
+                <p className="text-foreground/70 text-sm leading-relaxed">
+                  Discuss research in natural sciences supported by computational modeling, simulations, and data analysis techniques.
+                </p>
+              </div>
+              <div className="flex gap-2 mt-4 flex-wrap">
+                <span className="text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-2.5 py-1 rounded-full">
+                  #SDG13 Climate Action
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Call to Action - Remodeled for better layout on desktop */}
+      {/* Call to Action */}
       <div className="bg-gradient-to-br from-[#e8682a] to-[#d65519] rounded-3xl p-8 md:p-12 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="text-center md:text-left md:w-2/3">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

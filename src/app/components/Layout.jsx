@@ -112,7 +112,7 @@ export function Layout() {
         <div className="container mx-auto px-4 text-center">
           <p className="mb-2">© 2026 CSITE Research Colloquium</p>
           <p className="text-sm opacity-80">
-            College of Science and Information Technology and Engineering
+              College of Science, Information Technology, and Engineering
           </p>
         </div>
       </footer>
