@@ -140,13 +140,14 @@ export function Presenters() {
               <Mic size={32} />
             </div>
             <h2 className="text-3xl font-bold mb-4">Oral Presentations</h2>
-            
-            {/* Global Schedule Banner */}
+
+           {/* Global Schedule Banner */}
             <div className="flex flex-wrap items-center justify-center gap-4 bg-secondary/50 border border-border/50 rounded-full px-6 py-3 text-sm font-medium">
               <span className="text-primary font-bold">April 16 Schedule:</span>
-              <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[#ff9856]"></span> Parallel 1 (11:30 AM)</span>
-              <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-primary"></span> Parallel 2 (2:00 PM)</span>
-              <span className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-500"></span> Parallel 3 (3:30 PM)</span>
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-primary"></span> 
+                Parallel Sessions 1 & 2 (1:00 PM - 4:15 PM)
+              </span>
             </div>
           </div>
 
@@ -195,10 +196,16 @@ export function Presenters() {
               <FileText size={32} />
             </div>
             <h2 className="text-3xl font-bold mb-4">Poster Presentations</h2>
-            <p className="text-muted-foreground text-center max-w-2xl bg-secondary/30 py-3 px-6 rounded-2xl border border-border/50">
-              Posters will be displayed in the main exhibition hall for interactive discussions. <br/>
-              <strong className="text-foreground">April 16, 3:30 PM - 4:30 PM</strong>
-            </p>
+
+                {/* Global Schedule Banner */}
+            <div className="flex flex-wrap items-center justify-center gap-4 bg-secondary/50 border border-border/50 rounded-full px-6 py-3 text-sm font-medium">
+              <span className="text-primary font-bold">April 16 Schedule:</span>
+                 <span className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#ff9856]"></span> 
+                Poster Exhibit Area (1:00 PM - 4:15 PM)
+              </span>
+            </div>
+  
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
