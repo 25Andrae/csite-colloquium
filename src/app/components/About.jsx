@@ -136,28 +136,33 @@ export function About() {
         <div className="lg:col-span-7">
           <h2 className="text-3xl font-bold mb-6 text-foreground">About the Colloquium</h2>
           <div className="space-y-6 text-foreground/80 leading-relaxed text-lg">
-            <p>
-              The 2nd CSITE Research Colloquium, guided by the theme{" "}
-              <span className="font-semibold text-primary">
-                “Innovating Science and Technology: Connecting Ideas, Empowering Communities”
-              </span>, 
-              serves as a dedicated academic platform for undergraduate and graduate students to 
-              present their research findings and capstone projects.
-            </p>
+                    <p>
+            The 2nd CSITE Research Colloquium, guided by the theme{" "}
+            <span className="font-semibold text-primary">
+              “Innovating Science and Technology: Connecting Ideas, Empowering Communities,”
+            </span>{" "}
+            is designed first and foremost as a premier academic stage for undergraduate and graduate students. Its primary mission is to provide these emerging scholars with a dedicated platform to present their original research findings and showcase their capstone projects.
+          </p>
 
-            <p>
-              The colloquium highlights interdisciplinary work across key areas such as Mathematics Education, 
-              Artificial Intelligence and Data Science, Engineering and IoT, Multimedia and Software Development, 
-              and Natural Sciences supported by computational models. These focus areas aim to address real-world 
-              challenges through data-driven, technological, and scientific approaches.
-            </p>
+          <p>
+            By placing student researchers at the center of the event, the colloquium highlights vital interdisciplinary work across key pillars:
+          </p>
 
-            <p>
-              Through plenary sessions, research presentations, and collaborative discussions, the event promotes 
-              the exchange of ideas, encourages innovation, and strengthens connections between academia and the 
-              community. It serves as an engaging environment for empowering emerging scholars to contribute 
-              meaningful advancements in science and technology.
-            </p>
+          <ul className="list-disc pl-6 md:pl-8 space-y-2 my-4 text-muted-foreground">
+            <li>Mathematics Education</li>
+            <li>Artificial Intelligence and Data Science</li>
+            <li>Engineering and IoT</li>
+            <li>Multimedia and Software Development</li>
+            <li>Natural Sciences (supported by computational models)</li>
+          </ul>
+
+          <p>
+            <span className="font-semibold text-foreground">Our Goal:</span> To empower the next generation of innovators. By providing a professional environment for students to share their data-driven and technological solutions, we bridge the gap between classroom learning and real-world impact.
+          </p>
+
+          <p>
+            Through plenary sessions and collaborative discussions, the event fosters a culture of innovation, allowing undergraduate and graduate presenters to connect with the broader community and contribute meaningful advancements to the fields of science and technology.
+          </p>
           </div>
         </div>
 

@@ -72,7 +72,7 @@ export function BookOfAbstract() {
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl mb-4 text-primary">Book of Abstract</h1>
+          <h1 className="text-4xl mb-4 text-primary">Book of Abstracts</h1>
           <p className="text-muted-foreground mb-8">
             Research abstracts from the 2nd CSITE Research Colloquium
           </p>

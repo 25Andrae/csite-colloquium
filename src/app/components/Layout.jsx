@@ -11,7 +11,7 @@ export function Layout() {
   const navLinks = [
     { to: "/", label: "About" },
     { to: "/programme", label: "Programme" },
-    { to: "/book-of-abstract", label: "Book of Abstract" },
+    { to: "/book-of-abstract", label: "Book of Abstracts" },
     { to: "/presenters", label: "Presenters" },
     { to: "/organizing-committee", label: "Organizing Committee" },
     { to: "/evaluation", label: "Evaluation" },
