@@ -1,4 +1,4 @@
-import { createHashRouter } from "react-router"; // <-- Change import
+import { createBrowserRouter } from "react-router";
 import { Layout } from "./components/Layout.jsx";
 import { About } from "./components/About.jsx";
 import { Programme } from "./components/Programme.jsx";
@@ -7,8 +7,7 @@ import { Presenters } from "./components/Presenters.jsx";
 import { OrganizingCommittee } from "./components/OrganizingCommittee.jsx";
 import { EvaluationForm } from "./components/EvaluationForm.jsx";
 
-// Change createBrowserRouter to createHashRouter
-export const router = createHashRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
     Component: Layout,
@@ -23,6 +22,7 @@ export const router = createHashRouter([
   }
 ],
   {
+    // ADD THIS HERE: Your GitHub repository name
     basename: "/csite-colloquium/",
   }
 );
