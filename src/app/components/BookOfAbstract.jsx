@@ -334,7 +334,7 @@ export function BookOfAbstract() {
           
           {/* Google Drive Link Button */}
           <a 
-            href="https://drive.google.com/your-link-here" 
+            href="https://drive.google.com/drive/folders/1QSHpx4_3Zv_OuKSkA6fWTObsv3xwE72s?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl hover:bg-primary/90 hover:scale-105 transition-all duration-300 font-medium shadow-lg shadow-primary/25"
