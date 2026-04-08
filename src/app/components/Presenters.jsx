@@ -45,11 +45,9 @@ export function Presenters() {
     { name: "Ramon A. Reyes III, Jay-ar S. Lauddin", topic: "EFA Logistics: An Automated Package Management System Using Optical Character Recognition (OCR) for EFA Enterprises Zamboanga City", code: "P-09" },
     { name: "Amani A. Halipa, Fatima A. Halipa", topic: "Synergistic Molluscicidal Potential of Annona Squamosa (Atis) Leaf Extracts and Allium Sativum (Garlic) Clove Extracts against Pomacea Canaliculata (Golden Apple Snail)", code: "P-10" },
     { name: "Gwyneth B. Landiza, Raine B. Yumol, Daniel Angelito G. Hernandez", topic: "Synthesis and hemostatic potential of copper nanoparticles derived from Achuete (Bixa orellana) seed covering extract", code: "P-11" },
-    { name: "Jan Ryan R. Simyunn", topic: "Exploring The Applications Of Simplex Noise In Procedural Open-World Biome Generation", code: "P-12" },
-    { name: "Christian Jed M. Duqueza", topic: "A Web-Based Centralized Internship Management", code: "P-13" },
-    { name: "Angelica J. Tan, Din Iyashimeer K. Yusop", topic: "Ccmr: Centralized Web Based System Of Student Case Record, Counseling Record, And Medical Record For The Office Of The Prefect Of Discipline, Infirmary, And Guidance Counseling Office At Ateneo De Zamboanga University Senior High School", code: "P-14" },
-    { name: "Stanford O. Chua", topic: "Student Organization Activity Event Management System", code: "P-15" },
-    { name: "Herlyn Kate P. Aizon, Franchesca V. Bernardo, Daniel Angelito G. Hernandez", topic: "Preliminary molecular dynamics simulation and investigation on the interaction of pectin polymer nanoparticle in extracellular matrix", code: "P-16" }
+    { name: "Jan Ryan R. Simyunn, Anton John A. Orillineda", topic: "Exploring The Applications Of Simplex Noise In Procedural Open-World Biome Generation", code: "P-12" },
+    { name: "Christian Jed M. Duqueza, Jae Ann O. Alcala", topic: "A Web-Based Centralized Internship Management", code: "P-13" },
+    { name: "Herlyn Kate P. Aizon, Franchesca V. Bernardo, Daniel Angelito G. Hernandez", topic: "Preliminary molecular dynamics simulation and investigation on the interaction of pectin polymer nanoparticle in extracellular matrix", code: "P-14" }
   ];
 
   // Helper function to group oral presenters by session

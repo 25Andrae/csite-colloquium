@@ -154,25 +154,29 @@ export function Programme() {
             {schedule.map((item, index) => (
               <div key={index}>
                 
-                {/* Morning Header */}
-                {item.isMorningBreak && (
-                  <div className="flex items-center gap-4 mb-10 ml-16 md:ml-28">
-                    <div className="bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-5 py-2 rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-blue-500/20">
-                      <Sun size={20} /> MORNING SESSION
-                    </div>
-                    <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent"></div>
-                  </div>
-                )}
+            {/* Morning Header */}
+            {item.isMorningBreak && (
+              <div className="flex items-center gap-4 mb-10 ml-16 md:ml-28">
+                <div className="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-5 py-2 rounded-xl font-bold text-sm tracking-widest flex items-center gap-2.5 shadow-lg shadow-orange-500/25 border border-white/20">
+                  <Sun size={18} className="text-white/90" /> 
+                  <span>MORNING SESSION</span>
+                </div>
+                {/* Divider line tinted slightly with morning colors */}
+                <div className="h-px flex-1 bg-gradient-to-r from-orange-300 via-border/50 to-transparent dark:from-orange-900/50"></div>
+              </div>
+            )}
 
-                {/* Afternoon Header */}
-                {item.isAfternoonBreak && (
-                  <div className="flex items-center gap-4 mb-10 mt-16 ml-16 md:ml-28">
-                    <div className="bg-gradient-to-r from-[#ff9856] to-orange-400 text-white px-5 py-2 rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-orange-500/20">
-                      <Sunset size={20} /> AFTERNOON SESSION
-                    </div>
-                    <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent"></div>
-                  </div>
-                )}
+            {/* Afternoon Header */}
+            {item.isAfternoonBreak && (
+              <div className="flex items-center gap-4 mb-10 mt-16 ml-16 md:ml-28">
+                <div className="bg-gradient-to-r from-orange-500 to-rose-500 text-white px-5 py-2 rounded-xl font-bold text-sm tracking-widest flex items-center gap-2.5 shadow-lg shadow-rose-500/25 border border-white/20">
+                  <Sunset size={18} className="text-white/90" /> 
+                  <span>AFTERNOON SESSION</span>
+                </div>
+                {/* Divider line tinted slightly with afternoon colors */}
+                <div className="h-px flex-1 bg-gradient-to-r from-rose-300 via-border/50 to-transparent dark:from-rose-900/50"></div>
+              </div>
+            )}
 
                 {/* Timeline Item */}
                 <div className="relative flex items-start group">
