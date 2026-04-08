@@ -1,5 +1,4 @@
-// 1. Change the import from createBrowserRouter to createHashRouter
-import { createHashRouter } from "react-router"; 
+import { createHashRouter } from "react-router"; // <-- Change import
 import { Layout } from "./components/Layout.jsx";
 import { About } from "./components/About.jsx";
 import { Programme } from "./components/Programme.jsx";
@@ -8,7 +7,7 @@ import { Presenters } from "./components/Presenters.jsx";
 import { OrganizingCommittee } from "./components/OrganizingCommittee.jsx";
 import { EvaluationForm } from "./components/EvaluationForm.jsx";
 
-// 2. Change the function call here
+// Change createBrowserRouter to createHashRouter
 export const router = createHashRouter([
   {
     path: "/",
@@ -24,7 +23,6 @@ export const router = createHashRouter([
   }
 ],
   {
-    // Keep your basename exactly as it is!
     basename: "/csite-colloquium/",
   }
 );
