@@ -45,19 +45,19 @@ function AbstractCard({ abstract }) {
         </p>
       </div>
 
-      {/* Toggle Button */}
-      <div className="mt-6 pt-4 border-t border-border flex items-center justify-start">
-        <button 
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="text-sm font-semibold text-primary flex items-center gap-1.5 hover:text-primary/80 transition-colors bg-primary/5 hover:bg-primary/10 px-4 py-2 rounded-lg"
-        >
-          {isExpanded ? (
-            <>Show Less <ChevronUp size={16} /></>
-          ) : (
-            <>Read Full Abstract <ChevronDown size={16} /></>
-          )}
-        </button>
-      </div>
+    {/* Toggle Button */}
+    <div className="mt-6 pt-4 border-t border-border flex items-center justify-start">
+      <button 
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="cursor-pointer text-sm font-semibold text-primary flex items-center gap-1.5 hover:text-primary/80 transition-colors bg-primary/5 hover:bg-primary/10 px-4 py-2 rounded-lg"
+      >
+        {isExpanded ? (
+          <>Show Less <ChevronUp size={16} /></>
+        ) : (
+          <>Read Full Abstract <ChevronDown size={16} /></>
+        )}
+      </button>
+    </div>
     </div>
   );
 }

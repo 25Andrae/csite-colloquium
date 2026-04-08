@@ -13,20 +13,19 @@ import {
 } from "lucide-react";
 import chairImg from "../../images/Janet.jpg";
 import coChairImg from "../../images/Fe.jpg";
+
 export function OrganizingCommittee() {
   const leadership = [
     {
       name: "Janet G. Tan",
       position: "Chair",
       gradient: "from-primary via-primary/90 to-[#ff9856]",
-      // Replace with your actual image paths (e.g., "/images/janet.jpg")
       image: chairImg,
     },
     {
       name: "Fe Grace T. Cañedo",
       position: "Co-Chair",
       gradient: "from-[#ff9856] via-[#ff883d] to-[#ff7a2d]", 
-      // Replace with your actual image paths
       image: coChairImg,
     },
   ];
@@ -34,7 +33,7 @@ export function OrganizingCommittee() {
   const committees = [
     {
       name: "Communication & Finance",
-      icon: <Megaphone className="text-primary group-hover:scale-110 transition-transform duration-300" size={26} />,
+      icon: <Megaphone className="text-primary group-hover:-rotate-12 transition-transform duration-500" size={26} />,
       head: "Dr. Jocelyn D. Partosa",
       members: [
         "Fe Grace T. Cañedo",
@@ -45,7 +44,7 @@ export function OrganizingCommittee() {
     },
     {
       name: "Secretariat",
-      icon: <FileText className="text-primary group-hover:scale-110 transition-transform duration-300" size={26} />,
+      icon: <FileText className="text-primary group-hover:rotate-12 transition-transform duration-500" size={26} />,
       head: "Precious T. Opinion",
       members: [
         "Jessibel C. Dingcong",
@@ -59,7 +58,7 @@ export function OrganizingCommittee() {
     },
     {
       name: "Review",
-      icon: <ClipboardCheck className="text-primary group-hover:scale-110 transition-transform duration-300" size={26} />,
+      icon: <ClipboardCheck className="text-primary group-hover:scale-110 transition-transform duration-500" size={26} />,
       head: "Maureen Olive M. Gallardo",
       members: [
         "Dr. Paulino T. Acebes Jr.",
@@ -79,7 +78,7 @@ export function OrganizingCommittee() {
     },
     {
       name: "Program",
-      icon: <CalendarDays className="text-primary group-hover:scale-110 transition-transform duration-300" size={26} />,
+      icon: <CalendarDays className="text-primary group-hover:-rotate-12 transition-transform duration-500" size={26} />,
       head: "Kreanne F. Diaz",
       members: [
         "Khristan Dee Creencia",
@@ -91,7 +90,7 @@ export function OrganizingCommittee() {
     },
     {
       name: "Logistics",
-      icon: <Boxes className="text-primary group-hover:scale-110 transition-transform duration-300" size={26} />,
+      icon: <Boxes className="text-primary group-hover:rotate-12 transition-transform duration-500" size={26} />,
       head: "Carmellie Anne A. Plaza", 
       members: [
         "Levi B. Delos Reyes",
@@ -102,7 +101,7 @@ export function OrganizingCommittee() {
     },
     {
       name: "Documentation & Tech",
-      icon: <Camera className="text-primary group-hover:scale-110 transition-transform duration-300" size={26} />,
+      icon: <Camera className="text-primary group-hover:scale-110 transition-transform duration-500" size={26} />,
       head: "Clairizza V. Arcillas",
       members: [
         "Jewel Jesus E. Escalderon",
@@ -113,7 +112,7 @@ export function OrganizingCommittee() {
     },
     {
       name: "Food",
-      icon: <Utensils className="text-primary group-hover:scale-110 transition-transform duration-300" size={26} />,
+      icon: <Utensils className="text-primary group-hover:-rotate-12 transition-transform duration-500" size={26} />,
       head: "Maria Luisa U. Sousa",
       members: [
         "Joel Santos F. Quintanes",
@@ -122,55 +121,74 @@ export function OrganizingCommittee() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16 bg-background">
-      <div className="max-w-6xl mx-auto">
+    <div className="relative min-h-screen bg-background overflow-hidden selection:bg-primary/30 selection:text-primary-foreground pb-16">
+      {/* Ambient Animated Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[128px] animate-pulse"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#ff9856]/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[128px] animate-pulse delay-1000"></div>
+
+      <div className="container relative z-10 mx-auto px-4 py-20 max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-20 relative">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-primary tracking-tight">
+        <div className="text-center mb-24 relative">
+          <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold text-sm tracking-widest uppercase">
+            Behind the Scenes
+          </div>
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#ff9856] to-primary tracking-tight">
             Organizing Committee
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Meet the dedicated team working behind the scenes to make the CSITE Colloquium 2026 a resounding success.
+            Meet the dedicated team working tirelessly to make the <span className="text-foreground font-semibold">CSITE Colloquium 2026</span> a resounding success.
           </p>
         </div>
 
         {/* Leadership Section */}
-        <section className="mb-24">
-          <div className="flex items-center gap-4 mb-10 justify-center md:justify-start">
-            <div className="bg-primary/10 p-3.5 rounded-2xl shadow-sm">
-              <Award className="text-primary" size={32} />
+        <section className="mb-32">
+          <div className="flex items-center gap-4 mb-12 justify-center md:justify-start">
+            <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-transparent border border-primary/20 shadow-lg">
+              <Award className="text-primary absolute" size={28} />
+              <div className="absolute inset-0 rounded-2xl bg-primary/20 animate-ping opacity-20"></div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">Leadership</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">Leadership</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {leadership.map((leader, index) => (
               <div
                 key={index}
-                className={`relative bg-gradient-to-br ${leader.gradient} text-white rounded-[2rem] p-10 shadow-xl transform hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 overflow-hidden group`}
+                className="group relative rounded-[2.5rem] p-1 shadow-2xl transform hover:-translate-y-3 transition-all duration-500 overflow-hidden"
               >
-                {/* Decorative background blurs */}
-                <div className="absolute top-0 right-0 -mt-8 -mr-8 w-48 h-48 bg-white opacity-10 rounded-full blur-3xl transform group-hover:scale-110 transition-transform duration-500"></div>
-                <div className="absolute bottom-0 left-0 -mb-8 -ml-8 w-32 h-32 bg-black opacity-10 rounded-full blur-2xl"></div>
+                {/* Background Gradient Wrapper */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${leader.gradient} opacity-90 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                
+                {/* Animated Shine Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1500ms] ease-in-out z-10"></div>
 
-                <div className="relative flex flex-col items-center text-center h-full justify-center">
+                <div className="relative bg-black/10 backdrop-blur-sm rounded-[2.4rem] p-10 h-full flex flex-col items-center text-center justify-center z-20 border border-white/10">
+                  {/* Decorative background blurs inside card */}
+                  <div className="absolute top-0 right-0 -mt-12 -mr-12 w-64 h-64 bg-white/10 rounded-full blur-3xl transform group-hover:scale-125 transition-transform duration-700"></div>
+
                   {/* Round Picture Frame */}
-                  <div className="mb-6 p-1.5 bg-white/20 rounded-full backdrop-blur-md shadow-inner transform group-hover:scale-105 transition-transform duration-300">
-                    <div className="p-1 bg-white rounded-full shadow-lg">
-                      <img 
-                        src={leader.image} 
-                        alt={leader.name} 
-                        className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-transparent"
-                      />
+                  <div className="relative mb-8 transform group-hover:scale-105 transition-transform duration-500">
+                    <div className="absolute inset-0 bg-white/30 rounded-full blur-md animate-pulse"></div>
+                    <div className="relative p-1.5 bg-white/20 rounded-full backdrop-blur-md shadow-2xl">
+                      <div className="p-1 bg-white rounded-full">
+                        <img 
+                          src={leader.image} 
+                          alt={leader.name} 
+                          className="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover shadow-inner"
+                        />
+                      </div>
                     </div>
                   </div>
 
                   {/* Text Content */}
                   <div>
-                    <p className="text-white/90 font-bold tracking-[0.2em] uppercase text-xs md:text-sm mb-3">
+                    <p className="text-white/80 font-bold tracking-[0.25em] uppercase text-xs md:text-sm mb-3">
                       {leader.position}
                     </p>
-                    <h3 className="text-3xl md:text-4xl font-bold drop-shadow-sm">{leader.name}</h3>
+                    <h3 className="text-3xl md:text-4xl font-extrabold text-white drop-shadow-md tracking-tight">
+                      {leader.name}
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -179,55 +197,62 @@ export function OrganizingCommittee() {
         </section>
 
         {/* Committees Grid */}
-        <section className="mb-24">
-          <div className="flex items-center gap-4 mb-10 justify-center md:justify-start">
-            <div className="bg-primary/10 p-3.5 rounded-2xl shadow-sm">
-              <Users className="text-primary" size={32} />
+        <section className="mb-32">
+          <div className="flex items-center gap-4 mb-12 justify-center md:justify-start">
+             <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-transparent border border-primary/20 shadow-lg">
+              <Users className="text-primary" size={28} />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">Committees</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">Committees</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {committees.map((committee, index) => (
               <div
                 key={index}
-                className="group bg-card rounded-3xl p-8 shadow-sm border border-border/60 hover:shadow-xl hover:border-primary/40 transform hover:-translate-y-1.5 transition-all duration-300 flex flex-col relative overflow-hidden"
+                className="group relative bg-card/40 backdrop-blur-xl rounded-3xl p-8 shadow-lg border border-border/50 hover:bg-card/60 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transform hover:-translate-y-2 transition-all duration-500 flex flex-col overflow-hidden"
               >
+                {/* Neon Glow Corner */}
+                <div className="absolute -top-16 -right-16 w-32 h-32 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 group-hover:scale-150 transition-all duration-700"></div>
+
                 {/* Top Accent Line */}
-                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary/20 to-primary/5 group-hover:from-primary group-hover:to-primary/60 transition-colors duration-300" />
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent group-hover:via-primary transition-all duration-500" />
 
                 {/* Committee Header */}
-                <div className="flex items-center gap-4 mb-6 pb-5 border-b border-border/40">
-                  <div className="bg-primary/5 p-3 rounded-xl shadow-sm group-hover:bg-primary/10 transition-colors duration-300">
+                <div className="flex items-center gap-4 mb-6 pb-6 border-b border-border/40 relative z-10">
+                  <div className="bg-primary/10 p-3.5 rounded-xl shadow-inner group-hover:bg-primary/20 group-hover:shadow-primary/30 transition-all duration-300">
                     {committee.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-xl font-extrabold text-foreground group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-[#ff9856] transition-all duration-300">
                     {committee.name}
                   </h3>
                 </div>
 
                 {/* Committee Head */}
                 {committee.head && (
-                  <div className="mb-5 bg-secondary/30 rounded-xl p-4 border border-border/30">
-                    <p className="text-[11px] font-bold text-muted-foreground uppercase tracking-widest mb-1.5">
-                      Committee Head
-                    </p>
-                    <p className="text-base font-semibold text-foreground">
-                      {committee.head}
-                    </p>
+                  <div className="mb-6 relative z-10">
+                    <div className="bg-secondary/40 rounded-2xl p-4 border border-border/30 group-hover:border-primary/20 transition-colors duration-300">
+                      <p className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-1.5">
+                        Committee Head
+                      </p>
+                      <p className="text-base font-bold text-foreground">
+                        {committee.head}
+                      </p>
+                    </div>
                   </div>
                 )}
 
                 {/* Committee Members */}
-                <div className="flex-grow px-1">
-                  <p className="text-[11px] font-bold text-muted-foreground uppercase tracking-widest mb-3">
+                <div className="flex-grow relative z-10">
+                  <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em] mb-4 pl-1">
                     Members
                   </p>
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-3">
                     {committee.members.map((member, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors duration-300" />
-                        <span className="text-sm font-medium">{member}</span>
+                      <li key={idx} className="group/item flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors duration-300 cursor-default">
+                        <div className="flex items-center justify-center w-5 h-5 rounded-full bg-secondary group-hover/item:bg-primary/10 transition-colors duration-300">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover/item:bg-primary group-hover/item:scale-150 transition-all duration-300" />
+                        </div>
+                        <span className="text-sm font-medium group-hover/item:translate-x-1 transition-transform duration-300">{member}</span>
                       </li>
                     ))}
                   </ul>
@@ -238,20 +263,29 @@ export function OrganizingCommittee() {
         </section>
 
         {/* Contact Section */}
-        <div className="bg-gradient-to-br from-secondary/80 to-secondary/30 rounded-[2.5rem] p-10 sm:p-14 shadow-sm border border-border/50 text-center relative overflow-hidden">
-          {/* Subtle background decoration */}
-          <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="relative bg-gradient-to-br from-card to-card/50 backdrop-blur-2xl rounded-[3rem] p-12 sm:p-16 shadow-2xl border border-border/60 text-center overflow-hidden group">
+          {/* Dynamic background decoration */}
+          <div className="absolute -top-32 -right-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-1000"></div>
+          <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#ff9856]/10 rounded-full blur-3xl group-hover:bg-[#ff9856]/20 group-hover:scale-110 transition-all duration-1000"></div>
 
           <div className="relative z-10">
-            <h3 className="text-3xl font-bold mb-4 text-foreground">Get in Touch</h3>
-            <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
-              Have questions about the colloquium? Feel free to reach out to the organizing committee. We are here to help!
+            <h3 className="text-4xl md:text-5xl font-extrabold mb-6 text-foreground tracking-tight">Got Questions?</h3>
+            <p className="text-muted-foreground text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+              Whether you need details about the schedule or want to know more about the colloquium, we're just an email away.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-              <a href="mailto:colloquium@csite.university.edu" className="flex items-center gap-3 bg-background hover:bg-primary hover:text-white px-8 py-4 rounded-full shadow-sm border border-border transition-all duration-300 group w-full sm:w-auto justify-center">
-                <Mail className="text-primary group-hover:text-white transition-colors" size={20} />
-                <span className="font-semibold transition-colors">colloquium@csite.edu</span>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <a 
+                href="mailto:colloquium@csite.university.edu" 
+                className="relative inline-flex items-center justify-center gap-3 px-10 py-5 font-bold text-white transition-all duration-500 bg-primary rounded-full hover:bg-primary/90 hover:shadow-[0_0_40px_rgba(var(--primary),0.4)] hover:-translate-y-1 overflow-hidden group/btn w-full sm:w-auto"
+              >
+                {/* Button Shine Effect */}
+                <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-150%)] group-hover/btn:duration-1000 group-hover/btn:[transform:skew(-12deg)_translateX(150%)]">
+                  <div className="relative h-full w-8 bg-white/20" />
+                </div>
+                
+                <Mail size={22} className="relative z-10 group-hover/btn:scale-110 transition-transform duration-300" />
+                <span className="relative z-10 text-lg">colloquium@csite.edu</span>
               </a>
             </div>
           </div>
