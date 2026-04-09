@@ -118,56 +118,91 @@ export function Acknowledgement() {
         </section>
 
         {/* Sponsors Section */}
-        <section className="mb-32">
-          <div className="flex items-center gap-4 mb-12 justify-center">
-             <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-transparent border border-primary/20 shadow-lg">
-              <Handshake className="text-primary" size={28} />
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">Our Sponsors</h2>
-          </div>
+     {/* Sponsors Section */}
+<section className="mb-32 relative">
+  {/* Background Glow */}
+  <div className="absolute inset-0 flex justify-center">
+    <div className="w-[600px] h-[600px] bg-primary/10 blur-[120px] rounded-full opacity-30" />
+  </div>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-            {sponsors.map((sponsor, index) => (
-              <div
-                key={index}
-                className="group relative bg-card/40 backdrop-blur-xl rounded-3xl p-8 shadow-lg border border-border/50 hover:bg-card/60 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/40 transform hover:-translate-y-2 transition-all duration-500 flex flex-col items-center text-center overflow-hidden"
-              >
-                {/* Top Accent Line */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent group-hover:via-primary transition-all duration-500" />
+  {/* Header */}
+  <div className="relative flex items-center gap-4 mb-16 justify-center">
+    <div className="relative flex items-center justify-center w-16 h-16 rounded-3xl bg-gradient-to-br from-primary/30 to-transparent border border-primary/30 shadow-xl">
+      <Handshake className="text-primary animate-pulse" size={30} />
+    </div>
+    <h2 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">
+      Our Sponsors
+    </h2>
+  </div>
 
-                {/* Logo Template/Image Container */}
-                <div className="relative w-full h-48 mb-8 flex items-center justify-center bg-background/50 rounded-2xl border-2 border-dashed border-border/60 group-hover:border-primary/40 transition-colors duration-300 overflow-hidden">
-                  {sponsor.image ? (
-                    <img 
-                      src={sponsor.image} 
-                      alt={sponsor.name} 
-                      className="max-w-[80%] max-h-[80%] object-contain filter group-hover:drop-shadow-lg transition-all duration-300" 
-                    />
-                  ) : (
-                    <div className="text-center p-6">
-                      <Handshake className="mx-auto text-muted-foreground/30 mb-4 group-hover:text-primary/50 transition-colors" size={48} strokeWidth={1.5} />
-                      <p className="text-sm text-muted-foreground/60 font-mono">
-                        [ Logo Placement ]<br/>
-                      </p>
-                    </div>
-                  )}
-                  {/* Inner glow effect on hover */}
-                  <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+  {/* Sponsors Grid */}
+  <div className="relative grid md:grid-cols-2 gap-10 lg:gap-14 max-w-5xl mx-auto">
+    {sponsors.map((sponsor, index) => (
+      <div
+        key={index}
+        className="group relative rounded-3xl p-[1px] bg-gradient-to-br from-primary/20 via-transparent to-primary/20 hover:from-primary/50 hover:to-primary/40 transition-all duration-500"
+      >
+        {/* Card */}
+        <div className="relative bg-card/60 backdrop-blur-2xl rounded-3xl p-8 flex flex-col items-center text-center overflow-hidden shadow-xl border border-border/50 group-hover:border-primary/40 transition-all duration-500">
+
+          {/* Floating Glow */}
+          <div className="absolute -top-20 -right-20 w-56 h-56 bg-primary/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700" />
+
+          {/* Logo Area */}
+          <div className="relative w-full h-48 mb-8 flex items-center justify-center rounded-2xl overflow-hidden">
+
+            {/* Animated Gradient Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 opacity-80 group-hover:opacity-100 transition-all duration-500" />
+
+            {sponsor.image ? (
+              <img
+                src={sponsor.image}
+                alt={sponsor.name}
+                className="relative z-10 max-w-[75%] max-h-[75%] object-contain transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_10px_25px_rgba(0,0,0,0.25)]"
+              />
+            ) : (
+              <div className="relative z-10 flex flex-col items-center justify-center text-center">
+                {/* Animated Icon */}
+                <div className="relative mb-4">
+                  <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full animate-pulse"></div>
+                  <Handshake
+                    className="relative text-primary/70 group-hover:text-primary transition-all duration-500 group-hover:scale-110"
+                    size={50}
+                    strokeWidth={1.5}
+                  />
                 </div>
 
-                {/* Sponsor Details */}
-                <div className="relative z-10 w-full">
-                  <p className="text-[11px] font-bold text-primary uppercase tracking-[0.25em] mb-3">
-                    {sponsor.tier}
-                  </p>
-                  <h3 className="text-2xl font-extrabold text-foreground tracking-tight px-4 leading-tight">
-                    {sponsor.name}
-                  </h3>
-                </div>
+                {/* Better Placeholder Text */}
+                <p className="text-sm text-muted-foreground/70 font-medium">
+                  Sponsor Logo
+                </p>
               </div>
-            ))}
+            )}
+
+            {/* Shine Sweep Effect */}
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute -left-full top-0 h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:left-[120%] transition-all duration-1000" />
+            </div>
           </div>
-        </section>
+
+          {/* Sponsor Info */}
+          <div className="relative z-10">
+            <p className="text-[11px] font-bold text-primary uppercase tracking-[0.3em] mb-3">
+              {sponsor.tier}
+            </p>
+
+            <h3 className="text-2xl font-extrabold text-foreground tracking-tight leading-tight group-hover:text-primary transition-colors duration-300">
+              {sponsor.name}
+            </h3>
+          </div>
+
+          {/* Bottom Glow Line */}
+          <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
 
         {/* Call to Action Footer */}
         <div className="relative bg-gradient-to-br from-card to-card/50 backdrop-blur-2xl rounded-[3rem] p-12 sm:p-16 shadow-2xl border border-border/60 text-center overflow-hidden group max-w-5xl mx-auto">
