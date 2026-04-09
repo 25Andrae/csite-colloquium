@@ -14,6 +14,7 @@ export function Layout() {
     { to: "/presenters", label: "Presenters" },
     { to: "/book-of-abstract", label: "Book of Abstracts" },
     { to: "/organizing-committee", label: "Organizing Committee" },
+    { to: "/acknowledgement", label: "Acknowledgement" },
     { to: "/evaluation", label: "Evaluation" },
   ];
 

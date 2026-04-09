@@ -37,7 +37,7 @@ import { BookOfAbstract } from "./components/BookOfAbstract.jsx";
 import { Presenters } from "./components/Presenters.jsx";
 import { OrganizingCommittee } from "./components/OrganizingCommittee.jsx";
 import { EvaluationForm } from "./components/EvaluationForm.jsx";
-
+import { Acknowledgement } from "./components/Acknowledgement.jsx";
 // 2. Update the function call here
 export const router = createHashRouter([
   {
@@ -49,6 +49,7 @@ export const router = createHashRouter([
       { path: "book-of-abstract", Component: BookOfAbstract },
       { path: "presenters", Component: Presenters },
       { path: "organizing-committee", Component: OrganizingCommittee },
+      { path: "acknowledgement", Component: Acknowledgement },
       { path: "evaluation", Component: EvaluationForm },
     ],
   }
