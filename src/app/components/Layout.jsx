@@ -8,6 +8,7 @@ export function Layout() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+ // 1. Updated navLinks with the external URL and flag
   const navLinks = [
     { to: "/", label: "About" },
     { to: "/programme", label: "Programme" },
@@ -15,7 +16,11 @@ export function Layout() {
     { to: "/book-of-abstract", label: "Book of Abstracts" },
     { to: "/organizing-committee", label: "Organizing Committee" },
     { to: "/acknowledgement", label: "Acknowledgement" },
-    { to: "/evaluation", label: "Evaluation" },
+    { 
+      to: "https://docs.google.com/forms/d/e/1FAIpQLScdB4DE1UqzCAjqP2e918LT5o_ikgLNx8y18YMtZEzR_qPB6Q/viewform", 
+      label: "Evaluation",
+      external: true // Added flag here
+    },
   ];
 
   const isActive = (path) => {
@@ -55,20 +60,32 @@ export function Layout() {
                 </div> */}
               </Link>
 
-            {/* Desktop Navigation */}
+            {/* 2. Updated Desktop Navigation */}
             <nav className="hidden lg:flex space-x-1">
               {navLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className={`px-4 py-2 rounded-lg transition-all ${
-                    isActive(link.to)
-                      ? "bg-white text-[#e8682a]"
-                      : "hover:bg-white/20"
-                  }`}
-                >
-                  {link.label}
-                </Link>
+                link.external ? (
+                  <a
+                    key={link.to}
+                    href={link.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-lg transition-all hover:bg-white/20"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className={`px-4 py-2 rounded-lg transition-all ${
+                      isActive(link.to)
+                        ? "bg-white text-[#e8682a]"
+                        : "hover:bg-white/20"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </nav>
 
@@ -81,22 +98,35 @@ export function Layout() {
             </button>
           </div>
 
-          {/* Mobile Navigation */}
+       {/* 3. Updated Mobile Navigation */}
           {mobileMenuOpen && (
             <nav className="lg:hidden pb-4 space-y-2">
               {navLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-4 py-2 rounded-lg transition-all ${
-                    isActive(link.to)
-                      ? "bg-white text-[#e8682a]"
-                      : "hover:bg-white/20"
-                  }`}
-                >
-                  {link.label}
-                </Link>
+                link.external ? (
+                  <a
+                    key={link.to}
+                    href={link.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2 rounded-lg transition-all hover:bg-white/20"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block px-4 py-2 rounded-lg transition-all ${
+                      isActive(link.to)
+                        ? "bg-white text-[#e8682a]"
+                        : "hover:bg-white/20"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </nav>
           )}
