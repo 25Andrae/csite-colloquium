@@ -136,20 +136,24 @@ export function Acknowledgement() {
   </div>
 
   {/* Sponsors Grid */}
+  {/* Sponsors Grid */}
   <div className="relative grid md:grid-cols-2 gap-10 lg:gap-14 max-w-5xl mx-auto">
     {sponsors.map((sponsor, index) => (
       <div
         key={index}
-        className="group relative rounded-3xl p-[1px] bg-gradient-to-br from-primary/20 via-transparent to-primary/20 hover:from-primary/50 hover:to-primary/40 transition-all duration-500"
+        // ADDED h-full HERE
+        className="group relative h-full rounded-3xl p-[1px] bg-gradient-to-br from-primary/20 via-transparent to-primary/20 hover:from-primary/50 hover:to-primary/40 transition-all duration-500"
       >
         {/* Card */}
-        <div className="relative bg-card/60 backdrop-blur-2xl rounded-3xl p-8 flex flex-col items-center text-center overflow-hidden shadow-xl border border-border/50 group-hover:border-primary/40 transition-all duration-500">
+        {/* ADDED h-full HERE to force the card to stretch to the grid row height */}
+        <div className="relative h-full bg-card/60 backdrop-blur-2xl rounded-3xl p-8 flex flex-col items-center text-center overflow-hidden shadow-xl border border-border/50 group-hover:border-primary/40 transition-all duration-500">
 
           {/* Floating Glow */}
           <div className="absolute -top-20 -right-20 w-56 h-56 bg-primary/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700" />
 
           {/* Logo Area */}
-          <div className="relative w-full h-48 mb-8 flex items-center justify-center rounded-2xl overflow-hidden">
+          {/* ADDED shrink-0 HERE so the image container height is strictly preserved */}
+          <div className="relative w-full h-48 shrink-0 mb-8 flex items-center justify-center rounded-2xl overflow-hidden">
 
             {/* Animated Gradient Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 opacity-80 group-hover:opacity-100 transition-all duration-500" />
@@ -186,7 +190,8 @@ export function Acknowledgement() {
           </div>
 
           {/* Sponsor Info */}
-          <div className="relative z-10">
+          {/* Wrapped in flex-1 flex-col justify-end to push it to the bottom neatly */}
+          <div className="relative z-10 flex-1 flex flex-col justify-center">
             <p className="text-[11px] font-bold text-primary uppercase tracking-[0.3em] mb-3">
               {sponsor.tier}
             </p>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Calendar, MapPin, Users, ChevronLeft, ChevronRight } from "lucide-react";
+import { Calendar, MapPin, Users, ChevronLeft, ChevronRight, User, Quote } from "lucide-react"; // Added Quote icon
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 import qrCode from "../../images/RegistrationQR.svg";
@@ -8,6 +8,7 @@ import img2 from "../../images/C3About.jpg";
 import img3 from "../../images/C4About.jpg";
 import img4 from "../../images/C5About.jpg";
 import img5 from "../../images/C6About.jpg";
+import JocelynPartosa from "../../images/JocelynPartosa.svg";
 
 export function About() {
   const images = [img1, img2, img3, img4, img5];
@@ -88,7 +89,6 @@ export function About() {
         </div>
       </div>
 
-
       {/* Quick Info Cards */}
       <div className="grid md:grid-cols-3 gap-6 mb-16">
         <div className="bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow">
@@ -112,7 +112,7 @@ export function About() {
             <h3 className="text-lg font-semibold text-muted-foreground">Venue</h3>
           </div>
           <div className="space-y-1 pl-1">
-            <p className="font-bold text-foreground text-xl">Grand Astoria Hotel</p>
+            <p className="font-bold text-foreground text-xl">Celebrity Hall, Grand Astoria Hotel</p>
             <p className="text-foreground/70 font-medium">Zamboanga City, Philippines</p>
           </div>
         </div>
@@ -131,42 +131,45 @@ export function About() {
         </div>
       </div>
 
-      {/* About Content */}
+      {/* Main Content Area */}
       <div className="grid lg:grid-cols-12 gap-12 mb-16">
+        
+        {/* Left Column: About Content & Focus Areas */}
         <div className="lg:col-span-7">
+          
+          {/* About Section */}
           <h2 className="text-3xl font-bold mb-6 text-foreground">About the Colloquium</h2>
-          <div className="space-y-6 text-foreground/80 leading-relaxed text-lg">
-                    <p>
-            The 2nd CSITE Research Colloquium, guided by the theme{" "}
-            <span className="font-semibold text-primary">
-              “Innovating Science and Technology: Connecting Ideas, Empowering Communities,”
-            </span>{" "}
-            is designed first and foremost as a premier academic stage for undergraduate and graduate students. Its primary mission is to provide these emerging scholars with a dedicated platform to present their original research findings and showcase their capstone projects.
-          </p>
+          <div className="space-y-6 text-foreground/80 leading-relaxed text-lg mb-12">
+            <p>
+              The 2nd CSITE Research Colloquium, guided by the theme{" "}
+              <span className="font-semibold text-primary">
+                “Innovating Science and Technology: Connecting Ideas, Empowering Communities,”
+              </span>{" "}
+              is designed first and foremost as a premier academic stage for undergraduate and graduate students. Its primary mission is to provide these emerging scholars with a dedicated platform to present their original research findings and showcase their capstone projects.
+            </p>
 
-          <p>
-            By placing student researchers at the center of the event, the colloquium highlights vital interdisciplinary work across key pillars:
-          </p>
+            <p>
+              By placing student researchers at the center of the event, the colloquium highlights vital interdisciplinary work across key pillars:
+            </p>
 
-          <ul className="list-disc pl-6 md:pl-8 space-y-2 my-4 text-muted-foreground">
-            <li>Mathematics Education</li>
-            <li>Artificial Intelligence and Data Science</li>
-            <li>Engineering and IoT</li>
-            <li>Multimedia and Software Development</li>
-            <li>Natural Sciences (supported by computational models)</li>
-          </ul>
+            <ul className="list-disc pl-6 md:pl-8 space-y-2 my-4 text-muted-foreground">
+              <li>Mathematics Education</li>
+              <li>Artificial Intelligence and Data Science</li>
+              <li>Engineering and IoT</li>
+              <li>Multimedia and Software Development</li>
+              <li>Natural Sciences (supported by computational models)</li>
+            </ul>
 
-          <p>
-            <span className="font-semibold text-foreground">Our Goal:</span> To empower the next generation of innovators. By providing a professional environment for students to share their data-driven and technological solutions, we bridge the gap between classroom learning and real-world impact.
-          </p>
+            <p>
+              <span className="font-semibold text-foreground">Our Goal:</span> To empower the next generation of innovators. By providing a professional environment for students to share their data-driven and technological solutions, we bridge the gap between classroom learning and real-world impact.
+            </p>
 
-          <p>
-            Through plenary sessions and collaborative discussions, the event fosters a culture of innovation, allowing undergraduate and graduate presenters to connect with the broader community and contribute meaningful advancements to the fields of science and technology.
-          </p>
+            <p>
+              Through plenary sessions and collaborative discussions, the event fosters a culture of innovation, allowing undergraduate and graduate presenters to connect with the broader community and contribute meaningful advancements to the fields of science and technology.
+            </p>
           </div>
-        </div>
 
-        <div className="lg:col-span-5">
+          {/* Focus Areas Section (Moved Below About) */}
           <h2 className="text-3xl font-bold mb-6 text-foreground">Focus Areas</h2>
           <div className="space-y-4">
             <div className="bg-secondary/40 border-l-4 border-primary rounded-r-xl p-5 hover:bg-secondary/60 transition-colors flex flex-col justify-between">
@@ -253,6 +256,88 @@ export function About() {
             </div>
           </div>
         </div>
+
+        {/* Right Column: Message from the Dean */}
+        <div className="lg:col-span-5">
+          <h2 className="text-3xl font-bold mb-6 text-foreground">Message from the Dean</h2>
+          
+          <div className="relative bg-card border border-border shadow-lg rounded-3xl p-8 md:p-10 overflow-hidden group">
+            
+            {/* Background Decorative Quote Icon */}
+            <div className="absolute top-0 right-0 -mt-6 -mr-6 text-primary/5 rotate-12 transition-transform duration-500 group-hover:scale-110 pointer-events-none">
+              <Quote size={200} fill="currentColor" />
+            </div>
+
+            <div className="relative z-10 flex flex-col gap-6">
+              
+              {/* Highlighted Introductory Paragraph */}
+              <p className="text-xl md:text-2xl font-semibold text-primary leading-snug italic">
+                “Greetings from the College of Science, Information Technology, and Engineering! It is my pleasure to welcome you to this year’s Research Colloquium...”
+              </p>
+              
+              {/* Main Body Text - Removed italics, increased line spacing for readability */}
+              <div className="space-y-5 text-foreground/80 leading-relaxed text-[15px]">
+                <p>
+                  The pursuit of knowledge flourishes through collaboration, shared purpose, and mutual support. In this spirit, our research becomes more purposeful when we walk alongside one another—researchers, educators, students, and community partners—working together toward solutions that truly matter.
+                </p>
+                
+                <p>
+                  Today’s colloquium showcases a rich spectrum of research grounded in our key strands: Theories and Algorithms, which deepen our understanding of fundamental principles; Innovation and Technology, which translate ideas into practical solutions; Applied Science (Experimental/Computational), which advances knowledge through rigorous inquiry; and Urban Infrastructure and Construction Management, which responds to the evolving needs of our man-made surroundings. Together, these strands reflect a unified commitment to developing knowledge and innovations that meaningfully address real-world challenges and serve our communities.
+                </p>
+                
+                <p>
+                  In this light, we are especially honored to be joined by our Keynote Speaker, Dr. Ryan Ebardo, Assistant Dean for Research and Advanced Studies at the College of Computer Studies, De La Salle University, whose research portfolio spans healthcare, the digital environment, and education—areas that significantly shape human experience in today’s world.
+                </p>
+                
+                <p>
+                  We also recognize a meaningful synergy between this work and the sociological background of our Vice President for Higher Education (VPHE), highlighting the vital intersection of human behavior and technology. This convergence reminds us that innovation is most impactful when it is both technically sound and deeply attuned to the needs, experiences, and dignity of the people it serves.
+                </p>
+
+                <p>
+                  We also extend our heartfelt thanks to our Vice President for Higher Education, Fr. Rene C. Tacastacas, SJ, for joining us today and for his continued support of the College through the years. Through his welcome message, informed by his background in sociology, he reminds us that at the heart of innovation is a deep understanding of people—reinforcing the spirit of companionship that guides our shared pursuit of knowledge and service.
+                </p>
+
+                <p>
+                  Finally, my sincere appreciation to Engr. Janet G. Tan and Ms. Fe Grace T. Cañedo, our Colloquium Chair and Co-Chair, for their dedicated leadership in bringing this event to fruition. My gratitude also goes to all committee heads and members for their steadfast support and dedication throughout the preparation of this colloquium. Your efforts embody true companionship in action.
+                </p>
+
+                <p className="font-medium text-foreground">
+                  May this colloquium inspire meaningful conversations, deepen our sense of companionship, and strengthen our shared mission of using science and technology in the service of society.
+                </p>
+              </div>
+
+              {/* Dean's Profile/Signature Block */}
+              <div className="mt-4 border-t-2 border-primary/10 pt-8 flex flex-col md:flex-row gap-6 items-center md:items-center">
+                
+               {/* Cool Circular Image Template */}
+              <div className="relative group/avatar flex-shrink-0 w-24 h-24 rounded-full border-4 border-white shadow-xl overflow-hidden bg-primary/10 flex items-center justify-center ring-4 ring-primary/5">
+                
+                {/* Background gradient (visible if your SVG has transparency) */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/40 blur-sm group-hover/avatar:blur-none transition-all duration-300 z-0"></div>
+                
+                {/* Your Imported Image */}
+              <img 
+                  src={JocelynPartosa} 
+                  alt="Jocelyn Partosa" 
+                  className="w-full h-full object-cover object-top relative z-10"
+                />
+              </div>
+
+                {/* Dean's Details */}
+                <div className="flex-grow text-center md:text-left space-y-1.5">
+                  <p className="font-bold text-foreground text-xl tracking-tight">Jocelyn D. Partosa, PhD</p>
+                  <p className="text-sm font-semibold text-primary uppercase tracking-wide">Dean</p>
+                  <div className="text-sm text-muted-foreground leading-snug">
+                    <p>College of Science, Information Technology, and Engineering</p>
+                    <p>Ateneo de Zamboanga University</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
       </div>
 
       {/* Call to Action */}

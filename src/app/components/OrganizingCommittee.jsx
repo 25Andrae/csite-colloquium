@@ -143,13 +143,6 @@ export function OrganizingCommittee() {
 
         {/* Leadership Section */}
         <section className="mb-32">
-          <div className="flex items-center gap-4 mb-12 justify-center md:justify-start">
-            <div className="relative flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-transparent border border-primary/20 shadow-lg">
-              <Award className="text-primary absolute" size={28} />
-              <div className="absolute inset-0 rounded-2xl bg-primary/20 animate-ping opacity-20"></div>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">Leadership</h2>
-          </div>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {leadership.map((leader, index) => (
