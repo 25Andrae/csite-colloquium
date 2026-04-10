@@ -265,7 +265,7 @@ export function About() {
             Be part of an inspiring academic gathering that pushes the boundaries of knowledge.
           </p>
           <a 
-            href="https://docs.google.com/forms/d/1ot-c2C1RBWPBrqVe6piPS2PsBpjfucUq_dhaXcHSQy8/edit"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdZuRkB-2GCvERuleAaAf-_szftyj_1x018cxKqjE1gjhi21A/viewform?usp=header"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-[#e8682a] font-bold px-8 py-4 rounded-xl hover:bg-gray-100 hover:scale-105 transition-all inline-block shadow-md"
