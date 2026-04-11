@@ -59,7 +59,7 @@ export function Acknowledgement() {
               </p>
 
               <p className="leading-loose">
-                To our valued sponsors, <span className="text-primary font-bold tracking-wide">DEPARTMENT OF SCIENCE AND TECHNOLOGY</span> and <span className="text-primary font-bold tracking-wide">SMART NOTE COMPUTER SYSTEM</span>, your generous contributions provided the essential resources needed to foster innovation and bring this academic gathering to life. We are honored by your commitment to the advancement of research and technology.
+                To our valued sponsors, <span className="text-primary font-bold tracking-wide">DEPARTMENT OF SCIENCE AND TECHNOLOGY IX</span> and <span className="text-primary font-bold tracking-wide">SMART NOTE COMPUTER SYSTEM</span>, your generous contributions provided the essential resources needed to foster innovation and bring this academic gathering to life. We are honored by your commitment to the advancement of research and technology.
               </p>
 
               <p className="leading-loose">
