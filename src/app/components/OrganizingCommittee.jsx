@@ -59,7 +59,7 @@ export function OrganizingCommittee() {
     {
       name: "Review",
       icon: <ClipboardCheck className="text-primary group-hover:scale-110 transition-transform duration-500" size={26} />,
-      head: "Maureen Olive M. Gallardo",
+      head: "Dr. Maureen Olive M. Gallardo",
       members: [
         "Dr. Paulino T. Acebes Jr.",
         "Samuel R. Calisang",
@@ -79,7 +79,7 @@ export function OrganizingCommittee() {
     {
       name: "Program",
       icon: <CalendarDays className="text-primary group-hover:-rotate-12 transition-transform duration-500" size={26} />,
-      head: "Kreanne F. Diaz",
+      head: "Dr. Kreanne F. Diaz",
       members: [
         "Khristan Dee Creencia",
         "Queendel Vanee G. Garcia",

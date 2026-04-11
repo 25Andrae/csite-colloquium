@@ -139,7 +139,8 @@ export function About() {
           
           {/* About Section */}
           <h2 className="text-3xl font-bold mb-6 text-foreground">About the Colloquium</h2>
-          <div className="space-y-6 text-foreground/80 leading-relaxed text-lg mb-12">
+          {/* Add text-justify here */}
+          <div className="space-y-6 text-foreground/80 leading-relaxed text-lg mb-12 text-justify">
             <p>
               The 2nd CSITE Research Colloquium, guided by the theme{" "}
               <span className="font-semibold text-primary">
@@ -271,12 +272,15 @@ export function About() {
             <div className="relative z-10 flex flex-col gap-6">
               
               {/* Highlighted Introductory Paragraph */}
-              <p className="text-xl md:text-2xl font-semibold text-primary leading-snug italic">
-                “Greetings from the College of Science, Information Technology, and Engineering! It is my pleasure to welcome you to this year’s Research Colloquium...”
+              <p className="text-xl md:text-2xl font-medium text-primary/90 leading-relaxed italic text-left">
+                “Greetings from the College of Science, Information Technology, and Engineering! It is my pleasure to welcome you to this year’s Research Colloquium with the theme,{" "}
+                <span className="font-bold text-primary bg-primary/15 px-2 py-1 rounded-md box-decoration-clone">
+                  “Innovating Science and Technology: Connecting Ideas, Empowering Communities.”
+                </span>
               </p>
               
               {/* Main Body Text - Removed italics, increased line spacing for readability */}
-              <div className="space-y-5 text-foreground/80 leading-relaxed text-[15px]">
+              <div className="space-y-5 text-foreground/80 leading-relaxed text-[15px] text-justify">
                 <p>
                   The pursuit of knowledge flourishes through collaboration, shared purpose, and mutual support. In this spirit, our research becomes more purposeful when we walk alongside one another—researchers, educators, students, and community partners—working together toward solutions that truly matter.
                 </p>
