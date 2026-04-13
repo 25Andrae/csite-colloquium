@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Calendar, MapPin, Users, ChevronLeft, ChevronRight, User, Quote } from "lucide-react"; // Added Quote icon
+import { Calendar, MapPin, Users, ChevronLeft, ChevronRight, Quote } from "lucide-react"; 
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 import qrCode from "../../images/RegistrationQR.svg";
@@ -139,7 +139,6 @@ export function About() {
           
           {/* About Section */}
           <h2 className="text-3xl font-bold mb-6 text-foreground">About the Colloquium</h2>
-          {/* Add text-justify here */}
           <div className="space-y-6 text-foreground/80 leading-relaxed text-lg mb-12 text-justify">
             <p>
               The 2nd CSITE Research Colloquium, guided by the theme{" "}
@@ -170,7 +169,7 @@ export function About() {
             </p>
           </div>
 
-          {/* Focus Areas Section (Moved Below About) */}
+          {/* Focus Areas Section */}
           <h2 className="text-3xl font-bold mb-6 text-foreground">Focus Areas</h2>
           <div className="space-y-4">
             <div className="bg-secondary/40 border-l-4 border-primary rounded-r-xl p-5 hover:bg-secondary/60 transition-colors flex flex-col justify-between">
@@ -258,35 +257,51 @@ export function About() {
           </div>
         </div>
 
-        {/* Right Column: Message from the Dean */}
-        <div className="lg:col-span-5">
+       {/* Right Column: Message from the Dean */}
+        <div className="lg:col-span-5 flex flex-col">
           <h2 className="text-3xl font-bold mb-6 text-foreground">Message from the Dean</h2>
           
-          <div className="relative bg-card border border-border shadow-lg rounded-3xl p-8 md:p-10 overflow-hidden group">
+          <div className="relative bg-card border border-border shadow-xl rounded-3xl p-6 md:p-10 overflow-hidden flex-grow flex flex-col group">
             
             {/* Background Decorative Quote Icon */}
-            <div className="absolute top-0 right-0 -mt-6 -mr-6 text-primary/5 rotate-12 transition-transform duration-500 group-hover:scale-110 pointer-events-none">
-              <Quote size={200} fill="currentColor" />
+            <div className="absolute top-0 right-0 -mt-6 -mr-4 text-[#e8682a]/5 rotate-12 transition-transform duration-700 group-hover:scale-110 pointer-events-none">
+              <Quote size={240} fill="currentColor" strokeWidth={0} />
             </div>
 
-            <div className="relative z-10 flex flex-col gap-6">
+            <div className="relative z-10 flex flex-col h-full">
               
-              {/* Highlighted Introductory Paragraph */}
-              <p className="text-xl md:text-2xl font-medium text-primary/90 leading-relaxed italic text-left">
-                “Greetings from the College of Science, Information Technology, and Engineering! It is my pleasure to welcome you to this year’s Research Colloquium with the theme,{" "}
-                <span className="font-bold text-primary bg-primary/15 px-2 py-1 rounded-md box-decoration-clone">
-                  “Innovating Science and Technology: Connecting Ideas, Empowering Communities.”
-                </span>
-              </p>
+              {/* Canva-Style Header: Avatar + Greetings */}
+              <div className="flex flex-col xl:flex-row gap-6 mb-8 items-center xl:items-start">
+                
+                {/* Avatar Profile */}
+                <div className="flex-shrink-0 w-36 h-36 rounded-full border-[6px] border-white shadow-lg overflow-hidden bg-[#e8682a]/10 relative z-10">
+                  <img 
+                    src={JocelynPartosa} 
+                    alt="Jocelyn Partosa, PhD" 
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+
+                {/* Opening Quote (Orange & Italicized) */}
+                <div className="flex-1 text-[#e8682a] text-lg leading-relaxed italic text-center xl:text-justify">
+                  <p className="mb-4 font-medium opacity-90">
+                    “Greetings from the College of Science, Information Technology, and Engineering! It is my pleasure to welcome you to this year’s Research Colloquium with the theme,
+                  </p>
+                  <span className="font-bold text-[1.1rem] bg-[#e8682a]/10 text-[#d65519] px-3 py-1.5 rounded-lg box-decoration-clone inline-block leading-snug border border-[#e8682a]/20 shadow-sm">
+                    “Innovating Science and Technology: Connecting Ideas, Empowering Communities.”
+                  </span>
+                </div>
+              </div>
               
-              {/* Main Body Text - Removed italics, increased line spacing for readability */}
-              <div className="space-y-5 text-foreground/80 leading-relaxed text-[15px] text-justify">
+              {/* Main Body Content (Justified) */}
+              <div className="text-foreground/80 leading-relaxed text-[15px] text-justify space-y-5 flex-grow">
+                
                 <p>
                   The pursuit of knowledge flourishes through collaboration, shared purpose, and mutual support. In this spirit, our research becomes more purposeful when we walk alongside one another—researchers, educators, students, and community partners—working together toward solutions that truly matter.
                 </p>
                 
                 <p>
-                  Today’s colloquium showcases a rich spectrum of research grounded in our key strands: Theories and Algorithms, which deepen our understanding of fundamental principles; Innovation and Technology, which translate ideas into practical solutions; Applied Science (Experimental/Computational), which advances knowledge through rigorous inquiry; and Urban Infrastructure and Construction Management, which responds to the evolving needs of our man-made surroundings. Together, these strands reflect a unified commitment to developing knowledge and innovations that meaningfully address real-world challenges and serve our communities.
+                  Today’s colloquium showcases a rich spectrum of research grounded in our key strands: <span className="font-semibold text-foreground">Theories and Algorithms</span>, which deepen our understanding of fundamental principles; <span className="font-semibold text-foreground">Innovation and Technology</span>, which translate ideas into practical solutions; <span className="font-semibold text-foreground">Applied Science (Experimental/Computational)</span>, which advances knowledge through rigorous inquiry; and <span className="font-semibold text-foreground">Urban Infrastructure and Construction Management</span>, which responds to the evolving needs of our man-made surroundings. Together, these strands reflect a unified commitment to developing knowledge and innovations that meaningfully address real-world challenges and serve our communities.
                 </p>
                 
                 <p>
@@ -305,32 +320,16 @@ export function About() {
                   Finally, my sincere appreciation to Engr. Janet G. Tan and Ms. Fe Grace T. Cañedo, our Colloquium Chair and Co-Chair, for their dedicated leadership in bringing this event to fruition. My gratitude also goes to all committee heads and members for their steadfast support and dedication throughout the preparation of this colloquium. Your efforts embody true companionship in action.
                 </p>
 
-                <p className="font-medium text-foreground">
+                <p className="font-medium text-foreground pb-2">
                   May this colloquium inspire meaningful conversations, deepen our sense of companionship, and strengthen our shared mission of using science and technology in the service of society.
                 </p>
               </div>
 
-              {/* Dean's Profile/Signature Block */}
-              <div className="mt-4 border-t-2 border-primary/10 pt-8 flex flex-col md:flex-row gap-6 items-center md:items-center">
-                
-               {/* Cool Circular Image Template */}
-              <div className="relative group/avatar flex-shrink-0 w-24 h-24 rounded-full border-4 border-white shadow-xl overflow-hidden bg-primary/10 flex items-center justify-center ring-4 ring-primary/5">
-                
-                {/* Background gradient (visible if your SVG has transparency) */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/40 blur-sm group-hover/avatar:blur-none transition-all duration-300 z-0"></div>
-                
-                {/* Your Imported Image */}
-              <img 
-                  src={JocelynPartosa} 
-                  alt="Jocelyn Partosa" 
-                  className="w-full h-full object-cover object-top relative z-10"
-                />
-              </div>
-
-                {/* Dean's Details */}
-                <div className="flex-grow text-center md:text-left space-y-1.5">
+              {/* Signature Block */}
+              <div className="mt-6 border-t-2 border-[#e8682a]/10 pt-6">
+                <div className="space-y-1">
                   <p className="font-bold text-foreground text-xl tracking-tight">Jocelyn D. Partosa, PhD</p>
-                  <p className="text-sm font-semibold text-primary uppercase tracking-wide">Dean</p>
+                  <p className="text-sm font-bold text-[#e8682a] uppercase tracking-wide">Dean</p>
                   <div className="text-sm text-muted-foreground leading-snug">
                     <p>College of Science, Information Technology, and Engineering</p>
                     <p>Ateneo de Zamboanga University</p>
